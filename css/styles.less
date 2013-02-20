@@ -1,0 +1,150 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td{
+    border: 0px;
+    font-family: inherit;
+    font-size: 14px;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0px;
+    outline: 0px;
+    padding: 0px;
+    vertical-align: baseline;
+    font-family: "Century Gothic";
+}
+@charcoal: #333335;
+@white: #ffffff;
+@font-face {
+    font-family: "Century Gothic";
+    src: local('Century Gothic'),
+    url('fonts/century_gothic.eot?#iefix') format('embedded-opentype'),
+    url('fonts/century_gothic.woff') format('woff'),
+    url('fonts/century_gothic.ttf') format('truetype'),
+    url('fonts/century_gothic.svg#Century Gothic') format('svg');
+}
+.size(@width:auto, @height:auto){
+    width:@width;
+    height:@height;
+}
+.positionSize(@position:relative, @top:0px, @left:0px, @width:auto, @height:auto){
+    position:@position;
+    top:@top;
+    left:@left;
+    width:@width;
+    height:@height;
+}
+html{
+    height:100%;
+    min-width:320px;
+    overflow-y: scroll;
+}
+#top{
+    position:relative;
+    height: 80px;
+    margin:0 auto;
+    margin-bottom: 20px;
+}
+#container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#backgroundTop{
+    .positionSize(absolute, 0px, 0px, 100%, 79px);
+    background-color:@charcoal;
+}
+/*********** login form ***********/
+#mainLoginContent{
+    position: relative;
+    top: -28px;
+    width: 500px;
+    float: right;
+    color:@white;
+}
+#email{
+    .positionSize(absolute, 2px, 39px);
+    font-size: 10px;
+    color: #ccc;
+}
+#pass{
+    .positionSize(absolute, 2px, 221px, 200px);
+    font-size: 10px;
+    color: #ccc;
+}
+#loginBtn{
+    .positionSize(absolute, 21px, 403px, 65px, 21px);
+    padding: 0 6px;
+    color: #eee;
+    font-weight: bold;
+    background-color: @charcoal;
+    border: 2px outset buttonface;
+    border-width: 1px;
+    border-color: @white;
+    font-size: 12px;
+    -webkit-box-align: center;
+    text-align: center;
+    -webkit-appearance: button;
+    cursor: pointer;
+    line-height: 1.625;
+    box-sizing: border-box;
+}
+#mainLoginContent input[type="text"], #mainLoginContent input[type="password"]{
+    .size(160px, 17px);
+    border: 1px solid #CCC;
+    margin-top: 0px;
+    padding:1px 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    line-height:1;
+}
+/*********** end login form ***********/
+#SiteLogo{
+    .positionSize(relative, 8px, 5%, 137px, 60px);
+    border-width:0px;
+    margin-bottom:-23px;
+    margin-top:0px;
+    background-image:url('../img/SiteLogo.png');
+    background-repeat:no-repeat;
+    text-decoration: none;
+}
+#ourHome{
+    img#logo{
+        margin: 0 auto;
+        width: 100%;
+        display: block;
+        max-width: 500px;
+        margin-bottom: 30px;
+    }
+    #text{
+        margin-bottom: 30px;
+        padding: 40px;
+    }
+    #team{
+        width: 100%;
+        margin:0 auto;
+        text-align: center;
+        img{
+            display: inline-block;
+            width: 160px;
+            height: 160px;
+            margin: 10px;
+            border-radius: 80px;
+        }
+    }
+}
+.clearfooter{
+    height: 100px;
+    clear: both;
+}
+#footer{
+    height:40px;
+    margin:0 auto;
+    min-width:320px;
+    color:#666;
+    text-align:center;
+}
