@@ -8,7 +8,6 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td{
     border: 0px;
     font-family: inherit;
-    font-size: 14px;
     font-style: inherit;
     font-weight: inherit;
     margin: 0px;
@@ -22,7 +21,7 @@ table, caption, tbody, tfoot, thead, tr, th, td{
 @font-face {
     font-family: "Century Gothic";
     src: local('Century Gothic'),
-    url('fonts/century_gothic.eot?#iefix') format('embedded-opentype'),
+    url('fonts/century_gothic.otf?#iefix') format('embedded-opentype'),
     url('fonts/century_gothic.woff') format('woff'),
     url('fonts/century_gothic.ttf') format('truetype'),
     url('fonts/century_gothic.svg#Century Gothic') format('svg');
@@ -40,25 +39,27 @@ table, caption, tbody, tfoot, thead, tr, th, td{
 }
 html{
     height:100%;
-    min-width:320px;
+    //min-width:320px;
     overflow-y: scroll;
 }
 body{
     font-family: "Century Gothic";
+    font-size: 100%;
 }
-#top{
-    position:relative;
-    height: 80px;
-    margin:0 auto;
-    margin-bottom: 20px;
-}
+
 #container{
     max-width: 1200px;
     margin: 0 auto;
 }
 #backgroundTop{
-    .positionSize(absolute, 0px, 0px, 100%, 79px);
+    //.positionSize(absolute, 0px, 0px, 100%, 79px);
     background-color:@charcoal;
+    #top{
+      position:relative;
+      height: 80px;
+      margin:0 auto;
+      margin-bottom: 20px;
+    }
 }
 /*********** login form ***********/
 #mainLoginContent{
@@ -118,14 +119,14 @@ body{
 #ourHome{
     img#logo{
         margin: 0 auto;
-        width: 100%;
         display: block;
-        max-width: 800px;
-        margin-bottom: 20px;
+        max-width: 100%;
+        max-height: 250px;
     }
-    #text{
+    .text{
         margin-bottom: 30px;
         padding: 30px;
+        font-size: 1.25em;
     }
     #team{
         width: 100%;
@@ -137,12 +138,6 @@ body{
             height: 160px;
             margin: 10px;
             border-radius: 80px;
-            &:first-child{
-                margin-left: 30px;
-            }
-            &:last-child{
-                margin-right: 30px;
-            }
         }
     }
 }
@@ -153,7 +148,37 @@ body{
 #footer{
     height:40px;
     margin:0 auto;
-    min-width:320px;
+    //min-width:320px;
     color:#666;
     text-align:center;
 }
+
+@media only screen and (max-width: 364px) {
+    #ourHome #team{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 548px) and (min-width: 364px) {
+    #ourHome #team{
+        width: 364px;
+    }
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 548px) {
+    #ourHome #team{
+        width: 548px;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+  #team{
+    width: 100%; //to 731
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 144dpi) {
+
+}
+//1100 & 731
