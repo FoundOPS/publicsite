@@ -13,18 +13,18 @@
 <body>
 <div id="backgroundTop">
     <div id="top">
-        <div id="SiteLogo"></div>
+        <img src="./img/SiteLogo.png" id="siteLogo" alt="FoundOPS"/>
         <div id="mainLoginContent">
-            <form action="http://app.foundops.com/Account/Login" method="post">
-                <div id="email">
-                    <label for="EmailAddress">Email Address</label><br/>
-                    <input id="EmailAddress" name="EmailAddress" type="text" value=""/>
+            <form class="clearfix" action="http://app.foundops.com/Account/Login" method="post">
+                <div class="formElement" id="email">
+                    <label for="emailAddress">Email Address</label>
+                    <input id="emailAddress" name="EmailAddress" type="text" value=""/>
                 </div>
-                <div id="pass">
-                    <label for="Password">Password</label><br/>
-                    <input id="Password" name="Password" type="password"/>
+                <div class="formElement" id="pass">
+                    <label for="password">Password</label>
+                    <input id="password" name="Password" type="password"/>
                 </div>
-                <input id="loginBtn" value="Login" type="submit"/>
+                <div id="loginBtnWrapper" class="formElement"><input id="loginBtn" value="Login" type="submit"/></div>
             </form>
         </div>
     </div>
